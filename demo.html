@@ -1,0 +1,115 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		body { color: #000000; background-color: white; font-family: Verdana; margin: 0px; }
+		p { color: #000000; margin-top: 0px; margin-bottom: 12px; font-family: Verdana; }
+		fieldset { margin:0 auto; padding:0; border:1px solid #D5DFE5; }
+		ul { margin:0 0 0 20px; padding:10px; }
+		li { margin:0; padding:0 0 7px 0; font-size: 12px; color: #333333; }
+		#content { font-size: 12px; padding: 0 15px 0 15px; }
+		.heading1 { color: #ffffff; font-family: Tahoma; font-size: 24px; background-color: #2163d7; margin: 0 -15px 0 -15px; padding: 10px 15px 7px 15px; width: 100%; }
+		.fieldset1 { padding:0 10px 0 10px; margin-bottom: 15px;}
+		.fieldset2 { margin-top:10px; margin-bottom:10px; }
+		.fieldset3 { margin:10px;}
+		.fieldset1 legend{ font-weight:bold; }
+		.fieldset2 legend{ margin-left:10px; font-weight:normal; }
+		.fieldset3 legend{ margin-left:10px; font-weight:normal; }
+		.left {float:left;}
+		.hand { cursor: pointer; }
+		.info {margin :0 0 2px 10px;}
+		.txtCorpNum {margin: 10px 10px 10px 10px; width: 300px; padding: 5px 5px 5px 5px}
+		.old { color: #888888; font-size:12px; }
+		.arr { color: #FF1100; font-size:12px; font-family:dotum; margin-left: 5px; margin-right: 3px; }
+		.new { color: #FF1100; font-size:12px; }
+		a:link { color: #336699; font-weight: bold; font-size:12px; text-decoration: underline; }
+		a:visited { color: #6699cc; font-weight: bold; font-size:12px; text-decoration: underline; }
+		a:active { color: #336699; font-weight: bold; font-size:12px; text-decoration: underline; }
+		a:hover { color: #cc3300; font-weight: bold; font-size:12px; text-decoration: underline; }
+		 .pay_button span:after { content: "»";position: absolute;opacity: 0;top: 0;right: -20px;transition: 0.5s; } .pay_button:hover span { padding-right: 25px; } .pay_button:hover span:after { opacity: 1; right: 0;} 
+    @keyframes blink {
+      70% { color: transparent; }
+    }
+	</style>
+	<script src="https://www.paybank.com/payserver/jquery.min.js"></script>
+    <script src="https://www.paybank.com/payserver/payment.min.js"></script>
+	<title>SDK 1.X Example.</title>
+	</head>
+	<body>
+		<div id="content">
+			<p class="heading1">SDK 1.X Example.</p>
+			<br/>
+			<fieldset class="fieldset1">
+				<legend>Test Pay</legend>
+					<ul>
+						<li>
+							<div class="radio">
+		                      <label>
+		                      <input type="radio" name="code" value="1" data-bv-field="code" checked="checked"> php
+		                    </label>
+		                    <label>
+		                      <input type="radio" name="code" value="2" data-bv-field="code"> java
+		                    </label>
+		                    <label>
+		                      <input type="radio" name="code" value="3" data-bv-field="code"> Nodejs
+		                    </label>
+
+		                  </div>
+						</li>
+
+						<li>
+							<button class="pay_button" onclick="paybank_pay();" style="vertical-align:middle; display: inline-block; border-radius: 4px; background-color: #2163d7;border: none;color: #FFFFFF;text-align: center; padding: 5px;width: 150px;transition: all 0.5s;cursor: pointer;"><span style="cursor: pointer;display: inline-block;position: relative;transition: 0.5s; ">PayBank Pay</span></button>
+						</li>
+					</ul>
+			</fieldset>
+		 </div>
+  <!-- iframe div -->
+  <div id="paybank_window"></div> 
+  <!-- iframe div -->
+  <script type="text/javascript">
+  var post_data = "";
+  var post_json = "";
+  var api_server = "";
+ 
+  function paybank_pay() {
+ 	var code = $("input[name='code']:checked").val();
+ 	if(code==1)
+ 	{
+ 		api_server = "lib/callback_server.php";
+ 	}else if(code==2){
+ 		api_server = "lib/callback_serve";
+ 	}else if(code==3){
+ 		api_server = "lib/callback_serve";
+ 	}
+      post_json = {
+            itemName:'test',
+            price:'10.00',
+            userID:'demo'
+ 	}
+  
+    
+    $.post(api_server,post_json,
+        function(data,status){
+          console.log(data);
+          var obj = JSON.parse(data); 
+          if(obj.sign)
+           {       	
+           action_pay(data);
+           }else{
+           alert('fail');
+           }
+       });
+    }
+   function success_main()
+   {
+    alert('success and ok'); 
+  
+    $("html,body").animate({scrollTop:0},800);
+    var myId = $("#total_money").text();
+    myId = parseInt(myId)+10;
+    $("#total_money").text(myId);
+    $("#total_money").attr("style","text-align: center; animation: 1s blink 3 steps(1);");  
+   }
+  </script> 
+</body>
+</html>
