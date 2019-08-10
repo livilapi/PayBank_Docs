@@ -165,4 +165,5 @@ TS=Date.parse(new Date())/1000&APPSECRET=appSecret).toUpCase()
 <a href="">link</a>
           
 
-Demo:https://demo.paybank.com/
+Demo 1:https://demo.paybank.com/
+Demo 2:https://demo.paybank.com/demo
