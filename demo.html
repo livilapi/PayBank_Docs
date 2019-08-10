@@ -43,22 +43,11 @@
 				<legend>Test Pay</legend>
 					<ul>
 						<li>
-							<div class="radio">
-		                      <label>
-		                      <input type="radio" name="code" value="1" data-bv-field="code" checked="checked"> php
-		                    </label>
-		                    <label>
-		                      <input type="radio" name="code" value="2" data-bv-field="code"> java
-		                    </label>
-		                    <label>
-		                      <input type="radio" name="code" value="3" data-bv-field="code"> Nodejs
-		                    </label>
-
-		                  </div>
+						      {itemName:'test',price:'10.00',userID:'demo'}
 						</li>
 
 						<li>
-							<button class="pay_button" onclick="paybank_pay();" style="vertical-align:middle; display: inline-block; border-radius: 4px; background-color: #2163d7;border: none;color: #FFFFFF;text-align: center; padding: 5px;width: 150px;transition: all 0.5s;cursor: pointer;"><span style="cursor: pointer;display: inline-block;position: relative;transition: 0.5s; ">PayBank Pay</span></button>
+						 <button class="pay_button" onclick="paybank_pay();" style="vertical-align:middle; display: inline-block; border-radius: 4px; background-color: #2163d7;border: none;color: #FFFFFF;text-align: center; padding: 5px;width: 150px;transition: all 0.5s;cursor: pointer;"><span style="cursor: pointer;display: inline-block;position: relative;transition: 0.5s; ">PayBank Pay</span></button>
 						</li>
 					</ul>
 			</fieldset>
@@ -69,18 +58,10 @@
   <script type="text/javascript">
   var post_data = "";
   var post_json = "";
-  var api_server = "";
+  var api_server = "lib/callback_server.php";
  
   function paybank_pay() {
- 	var code = $("input[name='code']:checked").val();
- 	if(code==1)
- 	{
- 		api_server = "lib/callback_server.php";
- 	}else if(code==2){
- 		api_server = "lib/callback_serve";
- 	}else if(code==3){
- 		api_server = "lib/callback_serve";
- 	}
+ 	
       post_json = {
             itemName:'test',
             price:'10.00',
