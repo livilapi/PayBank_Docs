@@ -34,7 +34,6 @@
 
  echo $value = json_encode($value, JSON_UNESCAPED_UNICODE);
  /*
- sql_query Create Order Number  
  $sql = "INSERT INTO table_name ( userID, orderNum, currencyType, sign, time ) VALUES ( '".$userID."', '".$orderNum."','".$currencyType."','".$sign."','".$time."' )";
  mysql_query($sql);
 
