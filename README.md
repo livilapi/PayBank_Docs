@@ -158,6 +158,73 @@ TS=Date.parse(new Date())/1000&APPSECRET=appSecret).toUpCase()
 
 
 
+# Error Code
+
+
+
+
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>System Success.</td>
+</tr>
+<tr>
+<td>201</td>
+<td>System error. Please refer to the msg content and seek for technical support.</td>
+</tr>
+<tr>
+<td>202</td>
+<td>Business data exception</td>
+</tr>
+<tr>
+<td>203</td>
+<td>Signature verification failed</td>
+</tr>
+<tr>
+<td>204</td>
+<td>Insufficient user assets</td>
+</tr>
+<tr>
+<td>205</td>
+<td>Key failure</td>
+</tr>
+<tr>
+<td>206</td>
+<td>Access times exceed the limit and deny access</td>
+</tr>
+<tr>
+<td>207</td>
+<td>No authority</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Request parameter error</td>
+</tr>
+<tr>
+<td>401</td>
+<td>ToKen expired</td>
+</tr>
+<tr>
+<td>402</td>
+<td>ToKen validation failed</td>
+</tr>
+<tr>
+<td>403</td>
+<td>ToKen user not logged in</td>
+</tr>
+
+
+</tbody>
+</table>
+
+
 
 
 # Sample Response
