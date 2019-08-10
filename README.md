@@ -225,24 +225,6 @@ TS=Date.parse(new Date())/1000&APPSECRET=appSecret).toUpCase()
 </table>
 
 
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>  <!-- iframe div -->
-  <div id="paybank_window"></div> 
-  <!-- iframe div --></td>
-</tr>
-
-
-</tbody>
-</table>
 
 
 # Sample Response
