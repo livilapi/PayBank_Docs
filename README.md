@@ -227,7 +227,7 @@ TS=Date.parse(new Date())/1000&APPSECRET=appSecret).toUpCase()
 
 
 
-# Sample Response
+# Sample Demo
 
 <a href="">link</a>
           
