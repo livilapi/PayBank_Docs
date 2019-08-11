@@ -230,13 +230,13 @@ TS=Date.parse(new Date())/1000&APPSECRET=appSecret).toUpCase()
 
 
 <pre><code>
-------head-----
+------head script-----
  <script src="https://www.paybank.com/payserver/jquery.min.js"></script>
  <script src="https://www.paybank.com/payserver/payment.min.js"></script>
-------head-----
+------head script-----
   
   
-------body-----  
+------Sample code-----  
   
 <table>
 <tbody>
@@ -248,7 +248,7 @@ TS=Date.parse(new Date())/1000&APPSECRET=appSecret).toUpCase()
 </tbody>
 </table>
   
-  ------body-----  
+  ------Sample code-----  
 
 
 </code></pre>
