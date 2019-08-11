@@ -43,27 +43,28 @@
 				<legend>Test Pay</legend>
 					<ul>
 						<li>
-						      {itemName:'test',price:'10.00',userID:'demo'}
+						     itemName:'test',price:'10.00',userID:'demo'}
 						</li>
 
 						<li>
-						 <button class="pay_button" onclick="paybank_pay();" style="vertical-align:middle; display: inline-block; border-radius: 4px; background-color: #2163d7;border: none;color: #FFFFFF;text-align: center; padding: 5px;width: 150px;transition: all 0.5s;cursor: pointer;"><span style="cursor: pointer;display: inline-block;position: relative;transition: 0.5s; ">PayBank Pay</span></button>
+						  Price : <input type="text" name="price" id="price" style="border: 1px solid #ccc; height: 25px;" placeholder="0.00"> <button class="pay_button" onclick="paybank_pay();" style="vertical-align:middle; display: inline-block; border-radius: 4px; background-color: #2163d7;border: none;color: #FFFFFF;text-align: center; padding: 5px;width: 150px;transition: all 0.5s;cursor: pointer;"><span style="cursor: pointer;display: inline-block;position: relative;transition: 0.5s; ">PayBank Pay</span></button>
 						</li>
 					</ul>
 			</fieldset>
 		 </div>
-
+  <!-- iframe div -->
+  <!-- iframe div -->
   <script type="text/javascript">
-  document.writeln("<div id=\'paybank_window\'></div> ");  //iframe div
+  document.writeln("<livil id=\'paybank_window\'></livil>"); // iframe div
   var post_data = "";
   var post_json = "";
   var api_server = "lib/callback_server.php";
  
   function paybank_pay() {
- 	
+ 	  var price = document.getElementById("price").value;
       post_json = {
             itemName:'test',
-            price:'10.00',
+            price:price,
             userID:'demo'
  	}
   
