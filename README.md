@@ -239,12 +239,6 @@ TS=Date.parse(new Date())/1000&APPSECRET=appSecret).toUpCase()
 ------body-----  
   
 <table>
-<thead>
-<tr>
-<th>Link</th>
-<th>Description</th>
-</tr>
-</thead>
 <tbody>
 <tr>
 <td><a href="blob/master/code.html">blob/master/code.html</td>
