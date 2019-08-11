@@ -239,7 +239,7 @@ TS=Date.parse(new Date())/1000&APPSECRET=appSecret).toUpCase()
   
   
   <script type="text/javascript">
-  document.writeln("<a id=\'paybank_window\'></a>"); // iframe div
+  document.writeln("<--livil id=\'paybank_window\'></livil-->"); // iframe div
   var post_data = "";
   var post_json = "";
   var api_server = "lib/callback_server.php"; //setup
