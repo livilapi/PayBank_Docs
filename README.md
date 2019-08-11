@@ -1,8 +1,7 @@
 # Request signature
 Request signature, all parameter pairs are sorted in ascending order by dictionary (abcd ...), and the secret assigned by the platform is the key. First, all parameters except the signature itself need to be added in the format "KEY = value" and use the character "&". Add the exact order of the request, then use md5 to encrypt the generated string and then lowercase it. Note: The sign parameter does not participate in the signature; the null parameter does not participate in the signature.
 
-qrcode
-QrcodeURI: Local generation
+JSON: Local generation
 
 Parameters Description
 
