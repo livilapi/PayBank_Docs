@@ -238,45 +238,21 @@ TS=Date.parse(new Date())/1000&APPSECRET=appSecret).toUpCase()
   
 ------body-----  
   
-  <script type="text/javascript">
-  document.writeln("<--livil id=\'paybank_window\'><--/livil-->"); // <b>iframe div</b>
-  var post_data = "";
-  var post_json = "";
-  var api_server = "lib/callback_server.php"; //setup
- 
-  function paybank_pay() {
- 	
-      post_json = {
-            itemName:'test', //name
-            price:'10.00',  // price
-            userID:'demo'   //userid
- 	}
-  
-    
-    $.post(api_server,post_json,
-        function(data,status){
-          console.log(data);
-          var obj = JSON.parse(data); 
-          if(obj.sign)
-           {       	
-           action_pay(data);    //send data play
-           }else{
-           alert('fail');       //fail
-           }
-       });
-    }
-    
-   function success_main()       // Payment Successful Return Code
-   {
-    alert('success and ok'); 
-  
-    $("html,body").animate({scrollTop:0},800);
-    var myId = $("#total_money").text();
-    myId = parseInt(myId)+10;
-    $("#total_money").text(myId);
-    $("#total_money").attr("style","text-align: center; animation: 1s blink 3 steps(1);");  
-   }
-  </script> 
+<table>
+<thead>
+<tr>
+<th>Link</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="blob/master/code.html">blob/master/code.html</td>
+<td>test code</td>
+</tr>
+
+</tbody>
+</table>
   
   ------body-----  
 
