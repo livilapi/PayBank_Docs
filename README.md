@@ -230,19 +230,16 @@ TS=Date.parse(new Date())/1000&APPSECRET=appSecret).toUpCase()
 
 
 <pre><code>
-<head>
+
  <script src="https://www.paybank.com/payserver/jquery.min.js"></script>
  <script src="https://www.paybank.com/payserver/payment.min.js"></script>
-</head>
 
-<body>
- 
   
   
   
   
   <script type="text/javascript">
-  document.writeln("<livil id=\'paybank_window\'></livil> "); // iframe div
+  document.writeln("<script id=\'paybank_window\'></script>"); // iframe div
   var post_data = "";
   var post_json = "";
   var api_server = "lib/callback_server.php"; //setup
@@ -280,7 +277,6 @@ TS=Date.parse(new Date())/1000&APPSECRET=appSecret).toUpCase()
     $("#total_money").attr("style","text-align: center; animation: 1s blink 3 steps(1);");  
    }
   </script> 
-</body>
 
 
 </code></pre>
