@@ -241,7 +241,7 @@ TS=Date.parse(new Date())/1000&APPSECRET=appSecret).toUpCase()
 <table>
 <tbody>
 <tr>
-<td><a href="https://github.com/livilapi/PayBank_Docs/blob/master/test.html">blob/master/code.html</td>
+<td><a href="https://github.com/livilapi/PayBank_Docs/blob/master/code.html">blob/master/code.html</td>
 <td>test code</td>
 </tr>
 
