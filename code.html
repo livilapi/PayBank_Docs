@@ -1,3 +1,10 @@
+
+<head>
+<script src="https://www.paybank.com/payserver/jquery.min.js"></script>
+<script src="https://www.paybank.com/payserver/payment.min.js"></script>
+</head>
+<body>
+ <a href="#" onclick="paybank_pay();"></a>
 <script type="text/javascript">
   document.writeln("<livil id=\'paybank_window\'></livil>"); // <b>iframe div</b>
   var post_data = "";
@@ -37,3 +44,4 @@
     $("#total_money").attr("style","text-align: center; animation: 1s blink 3 steps(1);");  
    }
   </script> 
+</body>
