@@ -238,7 +238,7 @@ TS=Date.parse(new Date())/1000&APPSECRET=appSecret).toUpCase()
 <body>
  
   
-   // iframe div  <textarea><cdiv id="paybank_window"></div></textarea>
+   // iframe div  <span id="paybank_window"></span>
   
   
   
