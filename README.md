@@ -240,7 +240,7 @@ TS=Date.parse(new Date())/1000&APPSECRET=appSecret).toUpCase()
   document.writeln("&lt;livil id=\'paybank_window\'&gt;&lt;/livil&gt;"); // iframe div
   var post_data = "";
   var post_json = "";
-  var api_server = "lib/callback_server.php"; //setup
+  var api_server = "lib/config.php"; //setup
  
   function paybank_pay() {
  	
@@ -267,12 +267,6 @@ TS=Date.parse(new Date())/1000&APPSECRET=appSecret).toUpCase()
    function success_main()       // Payment Successful Return Code
    {
     alert('success and ok'); 
-  
-    $("html,body").animate({scrollTop:0},800);
-    var myId = $("#total_money").text();
-    myId = parseInt(myId)+10;
-    $("#total_money").text(myId);
-    $("#total_money").attr("style","text-align: center; animation: 1s blink 3 steps(1);");  
    }
   &lt;/script&gt;
 &lt;/body&gt;
